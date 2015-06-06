@@ -9,6 +9,35 @@
 import Foundation
 import UIKit
 
+class EmojiEntry {
+    private var emoji : Character
+    private var definition : String
+    private var name : String
+    
+    init(emoji: Character){
+        
+    }
+    
+    func getName() -> String {
+        return self.name
+    }
+    
+    func getEmoji() -> Character {
+        return self.emoji
+    }
+    
+    func setEmoji(emojiToSet: Character) {
+         self.emoji = emojiToSet
+    }
+
+    func getDefinition() -> String {
+        return self.definition
+    }
+
+    
+    
+}
+
 class EmojiListViewController : UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
