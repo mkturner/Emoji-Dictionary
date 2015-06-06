@@ -14,12 +14,39 @@ class EmojiEntry {
     private var definition : String
     private var name : String
     
+    // init() funcs
+    // must always init with emoji
     init(emoji: Character){
-        
+        self.emoji = emoji
+        self.definition = "Emoji Definition"
+        self.name = "Emoji Name"
     }
     
+    init(emoji: Character, definition: String){
+        self.emoji = emoji
+        self.definition = definition
+        self.name = "Emoji Name"
+    }
+
+    init(emoji: Character, name: String){
+        self.emoji = emoji
+        self.definition = "Emoji Definition"
+        self.name = name
+    }
+    
+    init(emoji: Character, name: String, definition: String){
+        self.emoji = emoji
+        self.definition = definition
+        self.name = name
+    }
+
+    // getters and setters
     func getName() -> String {
         return self.name
+    }
+    
+    func setName(nameToSet: String) {
+        self.name = nameToSet
     }
     
     func getEmoji() -> Character {
@@ -33,9 +60,11 @@ class EmojiEntry {
     func getDefinition() -> String {
         return self.definition
     }
+    
+    func setDefinition(definitionToSet: String) {
+        self.definition = definitionToSet
+    }
 
-    
-    
 }
 
 class EmojiListViewController : UIViewController, UITableViewDataSource, UITableViewDelegate {
